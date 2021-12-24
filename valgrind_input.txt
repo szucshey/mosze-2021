@@ -1,0 +1,14 @@
+add 2 rows
+add 2 cols
+insert 1 cols after b
+insert 1 rows after 2
+new sheet egy
+new sheet ketto
+close 1
+add 2 rows
+add 2 cols
+edit a3 teszt
+edit c1 proba
+delete 2
+delete b
+exit

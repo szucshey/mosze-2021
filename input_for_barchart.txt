@@ -1,0 +1,29 @@
+add 4 rows
+add 4 cols
+edit a1 figyelmen kivul hagyva
+edit a2 sör
+edit a3 hús
+edit a4 banán
+edit a5 kenyér
+edit b1 Lidl
+edit c1 Aldi
+edit d1 Spar
+edit e1 Tesco
+edit b2 1
+edit c2 2
+edit d2 1.6
+edit e2 2.1
+edit b3 4
+edit c3 5
+edit d3 6
+edit e3 5.3
+edit b4 7
+edit c4 8
+edit d4 10
+edit e4 12
+edit b5 13
+edit c5 14
+edit d5 15
+edit e5 9.5
+barchart A1:E5 ar_osszehasonlitas
+exit
