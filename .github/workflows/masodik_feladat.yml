@@ -1,0 +1,14 @@
+name: masodik_feladat-workflow
+
+on:
+  push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: hihetetlentehin/mosze:latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: g++ -Wall main.cpp Spreadsheet.cpp Cell.cpp
+      - run: ./IO_test.sh
+      - run: diff output.txt expected_output.txt
