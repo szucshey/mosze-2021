@@ -1,0 +1,14 @@
+name: unittesting-workflow
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: hihetetlentehin/mosze:latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: cmake CMakeLists.txt
+    - run: make
+    - run: ./runTests

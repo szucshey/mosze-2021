@@ -1,0 +1,27 @@
+name: harmadik_feladat-workflow
+
+on:
+  push
+
+jobs:
+  deploy-docs:
+    runs-on: ubuntu-latest
+    container: hihetetlentehin/mosze:latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: doxygen doxyconf
+    - run: cd docs/latex && make
+
+    - name: Create artifact for html
+      uses: actions/upload-artifact@v2
+      with:
+        name: html-documentation
+        path: docs/html
+
+    - name: Create artifact for latex/pdf
+      uses: actions/upload-artifact@v2
+      with:
+        name: pdf-documentation
+        path: docs/latex/refman.pdf
+
+

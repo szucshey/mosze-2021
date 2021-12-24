@@ -1,0 +1,13 @@
+name: memorycheck-workflow
+
+on:
+  push:
+
+jobs:
+  memcheck:
+    runs-on: ubuntu-latest
+    container: hihetetlentehin/mosze:latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: g++ -Wall main.cpp Spreadsheet.cpp Cell.cpp -g
+    - run: valgrind --error-exitcode=1 --track-origins=yes --leak-check=full ./a.out < valgrind_input.txt 
